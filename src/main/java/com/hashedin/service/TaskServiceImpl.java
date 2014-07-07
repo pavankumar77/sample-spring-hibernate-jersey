@@ -20,7 +20,8 @@ public class TaskServiceImpl implements TaskService
 
     public Task find(Long taskId)
     {
-        // Returns the Task for given taskId.
+        // Returns the Task for given taskId
+    	System.out.println(" Find in service " + taskRepository.find(taskId));
         return taskRepository.find(taskId);
     }
 
@@ -56,5 +57,12 @@ public class TaskServiceImpl implements TaskService
         // Deletes the task with the give taskId and returns the same.
         return taskRepository.delete(taskId);
     }
+
+
+	@Override
+	public Task find(long taskId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
